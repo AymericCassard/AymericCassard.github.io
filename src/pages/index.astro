@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 const posts = (await getCollection('posts'))
   .filter(post => !post.data.draft)
@@ -10,16 +11,11 @@ const posts = (await getCollection('posts'))
 
 <BaseLayout title="Terminal">
   <div class="index-content framed">
-    <h1 id="hello-there">Hello there!</h1>
-    <p>Welcome to the Astro Terminal theme! This is a port of the popular Hugo Terminal theme by panr, bringing the same retro terminal aesthetic to Astro.</p>
-    <p>
-      You can customise the colour scheme using panr's <a href="https://panr.github.io/terminal-css/"><strong>Terminal.css</strong></a> 
-      generator - all generated schemes are fully compatible with this theme.
-    </p>
-    <p>
-      <a href="https://panr.github.io/terminal-css/">
-        <img src="https://panr.github.io/hugo-theme-terminal-demo/img/terminal-css.png" alt="Terminal.css Preview" />
-      </a>
+    <h1 id="hello-there">Bonjour !</h1>
+    <p>Je suis un étudiant en deuxième annèe de Master Informatique, parcours <strong>ASPIC</strong> (Systèmes Autonomes, perception, contrôle et interactions)</p>
+    <p>Cette page recense les projets auxquels j'ai pu prendre part.</p>
+    <p class="content">
+    <Image style="align-self: center" src='/img/firstbot/firstbot.jpg' alt="Robot firstbot a deux roues motrices, équipé de lipo et caméra, posé sur une table" width={576} height={1024} />
     </p>
   </div>
   
