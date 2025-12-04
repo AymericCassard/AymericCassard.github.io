@@ -16,7 +16,7 @@ const { title, description, pubDate, updatedDate, author, image, tags = [] } = A
 const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
 ---
 
-<BaseLayout title={title} description={description} image={image}>
+<BaseLayout title={"AC - " + title} description={description} image={image}>
   <article>
     <h1 class="post-title">{title}</h1>
     
